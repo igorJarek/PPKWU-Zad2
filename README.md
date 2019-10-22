@@ -7,8 +7,8 @@ General response format (for 1, 2, 3, 4 endpoints) :
 	}
   
 	Legend : 
-	"error"     - true, if "amount" and "possition" contain right data
-				- false, if "amount" equals zero
+	"error"     - true,	if "amount" equals zero
+				- false, if "amount" and "possition" contain right data
   
 	"amount"    - contains how much characters (upper, lower, etc) exists in string
 	"positions" - contains where, in string, characters are. Position starts from 0.
@@ -16,6 +16,7 @@ General response format (for 1, 2, 3, 4 endpoints) :
 Response format for endpoint 5 :
 	{
 		"result": [
+		"error": true/false,
 		{
 			"error": true/false, 
 			"amount": x,
@@ -39,6 +40,10 @@ Response format for endpoint 5 :
 		]
 	}
   
+	Legend : 
+	"error"     - true,	if all of blocks equals zero
+				- false, if any block contains right data
+				
 	First block is responsible for upper case character
 	Second block is responsible for lower case character
 	Third block is responsible for digits character
